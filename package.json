@@ -2,6 +2,9 @@
   "name": "nextjs-starter",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "rivalarya"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
