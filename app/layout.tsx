@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Next.js Starter",
-  description: "github.com/rivalaryz/nextjs-starter",
+  description: "github.com/rivalarya/nextjs-starter",
 };
 
 export default function RootLayout({
