@@ -6,9 +6,15 @@
   "rangeStrategy": "bump",
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["on the first day of the month"]
+    "schedule": ["before 6am on monday"],
+    "automerge": true
   },
   "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"],
+    "automerge": true
+  },
   "packageRules": [
     {
       "description": "Auto-merge minor and patch updates",
@@ -18,15 +24,6 @@
     {
       "description": "Auto-merge devDependencies",
       "matchDepTypes": ["devDependencies"],
-      "automerge": true
-    },
-    {
-      "description": "Security updates bypass schedule and automerge",
-      "matchDatasources": ["npm"],
-      "vulnerabilityAlerts": {
-        "enabled": true
-      },
-      "schedule": ["at any time"],
       "automerge": true
     }
   ]
