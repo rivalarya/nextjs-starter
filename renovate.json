@@ -4,6 +4,7 @@
   "schedule": ["on the first day of the month"],
   "timezone": "Asia/Jakarta",
   "rangeStrategy": "bump",
+  "minimumReleaseAge": "1 day",
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 6am on monday"],

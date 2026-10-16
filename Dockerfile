@@ -1,6 +1,6 @@
 FROM node:lts-alpine AS base
 RUN apk add --no-cache libc6-compat
-RUN corepack enable && corepack prepare pnpm@11.0.9 --activate
+RUN corepack enable && corepack prepare pnpm@12.14.0 --activate
 
 FROM base AS deps
 WORKDIR /app
