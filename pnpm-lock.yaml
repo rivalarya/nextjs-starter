@@ -8,7 +8,7 @@ overrides:
   '@babel/core@<=7.29.0': '>=8.0.10'
   '@humanfs/node@<0.16.8': '>=0.17.0'
   ajv@<6.14.0: '>=8.20.0'
-  baseline-browser-mapping@>=2.0.0 <2.11.0: '>=2.11.27'
+  baseline-browser-mapping@>=2.0.0 <2.11.0: '>=2.11.34'
   brace-expansion@<1.1.13: '>=5.0.12'
   brace-expansion@>=2.0.0 <2.0.3: '>=5.0.12'
   brace-expansion@>=3.0.0 <5.0.7: '>=5.0.12'
@@ -1106,6 +1106,11 @@ packages:
 
   baseline-browser-mapping@2.11.29:
     resolution: {integrity: sha512-YeesxhUmR4h5y5V8KF8iBCqJb8YFrBJ++XBTeGcWIaQOYXGN19JM0FoiOjAhwuDoln8owMgXcWBmgHtYSkky2w==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
+  baseline-browser-mapping@2.11.34:
+    resolution: {integrity: sha512-Aqr8mA1kIvyJ3UY5YAY7ib8LSo1DmDMbMnVqGPtsKW1LxaFQFwn9Eb3yvq2fUKJsRvaXjnAV7R5osqETapzNiA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -3231,6 +3236,8 @@ snapshots:
 
   baseline-browser-mapping@2.11.29: {}
 
+  baseline-browser-mapping@2.11.34: {}
+
   brace-expansion@5.0.12:
     dependencies:
       balanced-match: 4.0.4
@@ -4112,7 +4119,7 @@ snapshots:
     dependencies:
       '@next/env': 16.4.2
       '@swc/helpers': 0.5.23
-      baseline-browser-mapping: 2.11.29
+      baseline-browser-mapping: 2.11.34
       caniuse-lite: 1.0.30001816
       postcss: 8.5.23
       react: 19.3.0
