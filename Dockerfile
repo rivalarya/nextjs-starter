@@ -1,17 +1,19 @@
 FROM node:lts-alpine AS base
 RUN apk add --no-cache libc6-compat
-RUN corepack enable && corepack prepare pnpm@12.14.0 --activate
 
-FROM base AS deps
+# Corepack sudah tidak didistribusikan sejak Node 25, jadi pnpm diinstal via npm
+FROM base AS pnpm
+RUN npm install -g pnpm@12.14.0 --no-fund --no-audit
+
+FROM pnpm AS deps
 WORKDIR /app
 COPY package.json pnpm-lock.yaml* pnpm-workspace.yaml ./
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
-FROM base AS builder
+FROM deps AS builder
 WORKDIR /app
 ENV CI=true
-COPY --from=deps /app/node_modules ./node_modules
 COPY next.config.ts ./
 COPY . .
 RUN pnpm run build
